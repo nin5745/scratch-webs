@@ -1,0 +1,82 @@
+ <html>
+   <body>
+
+    <div>
+      <h1>
+        <%= game[0] %>
+      </h1>
+    </div>
+    
+
+   <div>
+     <%- game[1] %>
+   </div>
+
+  <div>
+   <h1>
+     by <%= username %>
+   </h1>
+  </div>
+     
+     <div id="reportDiv">
+      <textarea id="reportFeedback"></textarea>
+       <button id="reportbutton">Report</button>
+
+     </div>
+
+   </body>
+
+   <script>
+     const rb = document.getElementById("reportbutton")
+     const reportFeedback = document.getElementById("reportFeedback")
+     rb.addEventListener("click", function(){
+       const username = "<%= username %>";
+       const gamename = "<%= game[0] %>";
+       const feedback = reportFeedback.value
+       reportFeedback.value = ""
+       const data = {
+         username: username,
+         gamename:gamename,
+         feedback: feedback
+       }
+       console.log(data)
+       fetch('/report', {
+         method: "POST",
+         headers: {
+           'content-Type': 'application/json',
+         },
+         body: JSON.stringify(data)
+       })
+
+       
+     
+     
+    })
+     
+   </script>
+
+   
+ </html>
+
+   
+ <style>
+   body {
+     font-family: "Ubuntu", sans-serif;
+     text-align: center;
+     margin: 0px;
+   }
+   #reportDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   }
+   #reportButton {
+    padding: 10px 12px;
+    margin: 5px;
+    border-radius: 6px;
+    border: solid 1px white;background: white;
+    font-weight: bold;
+   }
+
+
+ </style>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+</head>
+
+
+  
+
+
+  <div id="mainDiv">
+
+    <form id="form" method="POST" action="/loginAttempt">
+        <h1>log in</h1>
+        <label>Username</label>
+        <input name="username" type="text">
+        <label>password</label>
+        
+        <input name="password" type="password">
+        
+        <button>log in</button>
+        <h3 id="result"></h3>
+
+      </form>
+
+    <a href="/register">Register</a>
+
+  </div>
+
+
+
+
+  <style>
+  body {
+    background: url('bg2.png');
+    background-size: cover;
+    font-size: x-large;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 200px;
+    color: #f4f4f4;
+  }
+  button {
+    font-size: larger;
+  }
+
+  a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+    
+  </style>

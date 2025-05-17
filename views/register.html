@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+      <h1 id="register" > Register </h1>
+
+    </header>
+
+    <div id="mainDiv">
+
+        <form id="form" action="/registerAttempt" method="post">
+
+          <label>Username</label>
+          <input type="text" name="username">
+          <label>Password</label>
+          <input type="password" name="password">
+          <label>retype Password</label>
+          <input type="password" name="ReTypePassword">
+          <button>Register</button>
+
+        </form>
+
+      <a href="/">
+        <p>log in</p>
+      </a>
+
+
+    </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+<style>
+body {
+  background: url('bg2.png');
+  background-size: cover;
+  font-size: x-large;
+  text-align: center;
+  align-content: center;
+  margin-bottom: 200px;
+  color: #f4f4f4;
+}
+button {
+  font-size: larger;
+}
+
+
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+  a {
+      color: rgb(248, 248, 248);
+      text-decoration: none;
+  }
+
+</style>
